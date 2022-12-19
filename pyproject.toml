@@ -25,16 +25,16 @@ skips = ["B101"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-numpy = "<1.22"
-matplotlib = "^3.5.2"
-typer = "^0.4.1"
-tqdm = "^4.64.0"
+numpy = "^1.24.0"
+matplotlib = "^3.6.2"
+typer = "^0.7.0"
+tqdm = "^4.64.1"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.3.0"
-pylint = "^2.13.9"
-scipy = "^1.8.1"
-ipython = "^8.3.0"
+black = "^22.12.0"
+pylint = "^2.15.9"
+scipy = "^1.9.3"
+ipython = "^8.7.0"
 bandit = { extras = ["toml"], version = "^1.7.4" }
 
 [tool.nitpick]
