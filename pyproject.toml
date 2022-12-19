@@ -1,0 +1,60 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "Computer Simulations SS2022"
+description = "Solutions to the problem sets"
+authors = ["Peter Waldert"]
+version = "0.0.1"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.flakeheaven]
+ignore = "D107,D202,D203,D401,E203,E402,E501,W503"
+max_line_length = 120
+inline-quotes = "double"
+
+[tool.bandit]
+skips = ["B101"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "<1.22"
+matplotlib = "^3.5.2"
+typer = "^0.4.1"
+tqdm = "^4.64.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.3.0"
+pylint = "^2.13.9"
+scipy = "^1.8.1"
+ipython = "^8.3.0"
+bandit = { extras = ["toml"], version = "^1.7.4" }
+
+[tool.nitpick]
+style = [
+  "github://MrP01/lint-me-now/nitpick-base-style.toml",
+  "github://MrP01/lint-me-now/nitpick-python-style.toml",
+  "github://MrP01/lint-me-now/nitpick-c-cpp-style.toml"
+]
+
+[tool.pylint.MASTER]
+jobs = 1
+extension-pkg-whitelist = "pydantic"
+
+[tool.pylint.BASIC]
+good-names-rgxs = "^[_a-z][_a-z0-9]?$"
+
+[tool.pylint.REPORTS]
+output-format = "colorized"
+
+[tool.pylint.FORMAT]
+max-line-length = 120
+max-module-lines = 1000
+indent-after-paren = 4

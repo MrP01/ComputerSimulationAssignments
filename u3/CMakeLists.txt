@@ -1,0 +1,6 @@
+add_executable(ising_run run.cpp Grid.cpp)
+add_executable(ising_visualise visualise.cpp Grid.cpp)
+add_executable(ising_multithreaded multithreaded.cpp Grid.cpp)
+target_link_libraries(ising_run ${CONAN_LIBS})
+target_link_libraries(ising_visualise ${CONAN_LIBS})
+target_link_libraries(ising_multithreaded ${CONAN_LIBS} pthread)
