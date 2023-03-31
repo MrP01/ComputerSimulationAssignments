@@ -24,18 +24,18 @@ inline-quotes = "double"
 skips = ["B101"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-numpy = "^1.24.0"
-matplotlib = "^3.6.2"
+python = "^3.9, <3.12"
+numpy = "^1.24.2"
+matplotlib = "^3.7.1"
 typer = "^0.7.0"
-tqdm = "^4.64.1"
+tqdm = "^4.65.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
-pylint = "^2.15.9"
-scipy = "^1.9.3"
-ipython = "^8.7.0"
-bandit = { extras = ["toml"], version = "^1.7.4" }
+black = "^23.3.0"
+pylint = "^2.17.1"
+scipy = "^1.10.1"
+ipython = "^8.12.0"
+bandit = { extras = ["toml"], version = "^1.7.5" }
 
 [tool.nitpick]
 style = [
